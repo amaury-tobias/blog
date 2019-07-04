@@ -7,3 +7,38 @@
             \|__|\|__|\|__|     \|__|\|__|\|__|\|_______|\|__|\|__|\___/ /     
                                                                   \|___|/      
 
+/* TEAM */
+
+    Developer: Isidro Amaury Tobias Quiroz
+    Contact: amaury.tobiasqr@gmail.com
+    Twitter: @Amaury_Tobias
+    From: Monterrey, Mexico
+
+/* THANKS */
+
+    Vue: https://vuejs.org/
+    Pug: https://pugjs.org/api/getting-started.html
+    https://nuxtjs.org/
+    https://fontawesome.com/
+    https://bulma.io/
+    https://highlightjs.org/
+    https://daneden.github.io/animate.css/
+
+    https://github.com/snowyu/front-matter-markdown.js
+    https://github.com/asika32764/vue2-animate
+
+    https://nodemon.io/
+
+    Por la inspiración a utilizar Nuxt:
+        Marina Aisa: https://marinaaisa.com/
+        Twitter: @MarinaAisa
+        Contact: marina@marinaaisa.com
+
+        Code Tribe: https://code-tribe.com/
+        Twitter: @tribe_code
+
+/* SITE */
+
+    Last update: 03/07/2019
+    Doctype: HTML5
+    IDE: VSCode, Firefox, Nodemon

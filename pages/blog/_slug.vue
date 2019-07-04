@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  .hero.is-medium.is-white.animated.slideInDown
+  .hero.is-white.animated.slideInDown
     .hero-body
       .container.has-text-centered
         h1.is-size-1.title.is-uppercase {{ title }}
