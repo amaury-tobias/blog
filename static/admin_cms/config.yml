@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    sort: "date:desc"
+    fields:
+      - {label: "Titulo", name: "title", widget: "string", required: true}
+      - {label: "Descripcion", name: "description", widget: text, required: true, pattern: ['.{10,20}', "La descripción debe contener entre 10 y 20 palabras"]}
+      - {label: "Fecha de Publicación", name: "date", widget: "date", required: true}
+      - {label: "Cuerpo", name: "body", widget: "markdown", required: true}
