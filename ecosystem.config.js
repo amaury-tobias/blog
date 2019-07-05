@@ -1,8 +1,10 @@
 module.exports = {
   apps: [
     {
-      name: 'Blog',
-      script: './server/index.js'
+      name: 'Blog_v2',
+      script: 'start',
+      cwd: '/home/amaurytobias/production/blog_v2/current',
+      max_memory_restart: '300M'
     }
   ],
   deploy: {
