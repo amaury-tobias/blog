@@ -28,20 +28,3 @@ module.exports = {
     }
   }
 }
-
-module.exports = {
-  apps: [],
-
-  deploy: {
-    production: {
-      user: 'deploy',
-      host: '192.168.13.3',
-      ref: 'origin/develop',
-      repo: 'git@bitbucket.org:hoang_app/malog-nuxt.git',
-      path: '/home/deploy/hoang_fe/',
-      'pre-deploy': 'git fetch --all',
-      'post-deploy':
-        'yarn install && yarn build && pm2 reload ecosystem.config.js --env production'
-    }
-  }
-}
