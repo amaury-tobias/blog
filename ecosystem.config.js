@@ -4,9 +4,6 @@ module.exports = {
       name: 'Blog_v2',
       script: 'npm',
       args: 'start',
-      cwd: '/home/amaurytobias/production/blog_v2/current',
-      error_file: '/home/amaurytobias/production/blog_v2/logs/web.err.log',
-      out_file: '/home/amaurytobias/production/blog_v2/logs/web.out.log',
       max_memory_restart: '300M',
       env: {
         NODE_ENV: 'development'
