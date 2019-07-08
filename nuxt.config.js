@@ -5,7 +5,7 @@ const dynamicRoutes = generateDynamicRoutes(articles)
 
 module.exports = {
   server: {
-    port: 3001
+    port: 3000
   },
   generate: {
     routes: dynamicRoutes

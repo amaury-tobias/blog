@@ -117,7 +117,7 @@ div
               p.is-family-line-height.is-size-6.block
                 span.is-size-5 TOOLS&nbsp;
                 span.is-size-7 VSCode/Xcode/Nginx/Git/BASH
-                progress.progress.is-dark(max='100') 15%
+                //progress.progress.is-dark(max='100') 15%
           .column
             p.is-size-3.is-uppercase Intereses
             p.subtitle.heading OUT OF OFFICE
