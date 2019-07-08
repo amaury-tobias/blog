@@ -1,12 +1,12 @@
 <template lang="pug">
 figure.image(:class='classes')
-  img(v-lazy='imageURL' :class="`${isRounded}`")
+  img(v-lazy='src' :class="`${isRounded}`")
 </template>
 
 <script>
 export default {
   props: {
-    imageURL: {
+    src: {
       type: String,
       default: ''
     },
@@ -28,6 +28,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+figure {
+  margin-left: 4rem !important;
+  margin-right: 4rem !important;
+}
+
 .image-placeholder {
   overflow: hidden;
   line-height: 0;

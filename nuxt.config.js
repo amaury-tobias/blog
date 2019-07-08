@@ -42,7 +42,6 @@ module.exports = {
     '~/plugins/axios.js',
     '~/plugins/lazyload.js',
     '~/plugins/lazyImage.js',
-    '~/plugins/inlineCode.js',
     '~/plugins/vueGithubActivity.js'
   ],
   modules: [

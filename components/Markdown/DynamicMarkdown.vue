@@ -34,7 +34,9 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (min-width: 768px) {
   .dynamicContent {
-    padding: 0 5rem;
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -45,5 +47,13 @@ export default {
 
 pre {
   padding: 0 !important;
+}
+
+code {
+  display: inline;
+}
+
+pre code {
+  display: block;
 }
 </style>

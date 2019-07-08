@@ -3,7 +3,7 @@ div
   .hero.is-white.animated.slideInDown
     .hero-body
       .container.has-text-centered
-        h1.is-size-1.title.is-uppercase {{ title }}
+        h1.is-size-1.is-size-3-mobile.is-uppercase.has-text-weight-semibold {{ title }}
         p.subtitle.heading {{ date }}
   section.section.animated.slideInUp
     .container.has-text-justified
@@ -37,15 +37,16 @@ export default {
       const attr = fileContent.attributes
 
       const { title, tags, date, author, image } = attr
-      const dateOptions = {
+
+      const options = {
         weekday: 'long',
         year: 'numeric',
-        month: 'short',
+        month: 'long',
         day: 'numeric'
       }
 
       const publishedDate = new Date(date)
-      const published = publishedDate.toLocaleDateString('es-MX', dateOptions)
+      const published = publishedDate.toLocaleDateString('es-ES', options)
 
       return {
         title,
