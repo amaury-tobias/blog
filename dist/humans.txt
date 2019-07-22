@@ -1,0 +1,43 @@
+         ________  _____ ______   ________  ___  ___  ________      ___    ___ 
+        |\   __  \|\   _ \  _   \|\   __  \|\  \|\  \|\   __  \    |\  \  /  /|
+        \ \  \|\  \ \  \\\__\ \  \ \  \|\  \ \  \\\  \ \  \|\  \   \ \  \/  / |
+         \ \   __  \ \  \\|__| \  \ \   __  \ \  \\\  \ \   _  _\   \ \    / / 
+          \ \  \ \  \ \  \    \ \  \ \  \ \  \ \  \\\  \ \  \\  \|   \/  /  /  
+           \ \__\ \__\ \__\    \ \__\ \__\ \__\ \_______\ \__\\ _\ __/  / /    
+            \|__|\|__|\|__|     \|__|\|__|\|__|\|_______|\|__|\|__|\___/ /     
+                                                                  \|___|/      
+
+/* TEAM */
+
+    Developer: Isidro Amaury Tobias Quiroz
+    Contact: amaury.tobiasqr@gmail.com
+    Twitter: @Amaury_Tobias
+    From: Monterrey, Mexico
+
+/* THANKS */
+
+    Vue: https://vuejs.org/
+    Pug: https://pugjs.org/api/getting-started.html
+    Nuxt: https://nuxtjs.org/
+    Font Awesome: https://fontawesome.com/
+    Bulma: https://bulma.io/
+    Animate.css: https://daneden.github.io/animate.css/
+    Highlightjs: https://highlightjs.org/
+    front-matter-markdown: https://github.com/snowyu/front-matter-markdown.js
+    vue2-animate: https://github.com/asika32764/vue2-animate
+    vue-github-feed: https://github.com/lexmartinez/vue-github-activity
+    Nodemon: https://nodemon.io/
+
+    Por la inspiración a utilizar Nuxt:
+        Marina Aisa: https://marinaaisa.com/
+        Twitter: @MarinaAisa
+        Contact: marina@marinaaisa.com
+
+        Code Tribe: https://code-tribe.com/
+        Twitter: @tribe_code
+
+/* SITE */
+
+    Last update: 03/07/2019
+    Doctype: HTML5
+    IDE: VSCode, Firefox, Nodemon
