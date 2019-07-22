@@ -1,13 +1,13 @@
 <template lang="pug">
 div
-  .hero.is-medium.animated.slideInDown
+  .hero
     .hero-body
-      .container.has-text-centered
+      .container.has-text-centered.animated.fadeIn
         h1.is-size-1.title.is-uppercase POSTS
         h2.subtitle.heading UNKNOWN ME
-  .container.has-text-centered.animated.slideInUp
+  .container.has-text-centered
     span(v-for='(post, index) in posts' :key='index')
-      div
+      div.animated.fadeIn
         n-link(:to='`/blog/${post.slug}`') {{ post.title }}
 </template>
 

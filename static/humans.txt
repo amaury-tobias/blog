@@ -18,16 +18,15 @@
 
     Vue: https://vuejs.org/
     Pug: https://pugjs.org/api/getting-started.html
-    https://nuxtjs.org/
-    https://fontawesome.com/
-    https://bulma.io/
-    https://highlightjs.org/
-    https://daneden.github.io/animate.css/
-
-    https://github.com/snowyu/front-matter-markdown.js
-    https://github.com/asika32764/vue2-animate
-
-    https://nodemon.io/
+    Nuxt: https://nuxtjs.org/
+    Font Awesome: https://fontawesome.com/
+    Bulma: https://bulma.io/
+    Animate.css: https://daneden.github.io/animate.css/
+    Highlightjs: https://highlightjs.org/
+    front-matter-markdown: https://github.com/snowyu/front-matter-markdown.js
+    vue2-animate: https://github.com/asika32764/vue2-animate
+    vue-github-feed: https://github.com/lexmartinez/vue-github-activity
+    Nodemon: https://nodemon.io/
 
     Por la inspiración a utilizar Nuxt:
         Marina Aisa: https://marinaaisa.com/

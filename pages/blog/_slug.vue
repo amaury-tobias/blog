@@ -8,10 +8,9 @@ div
   section.section.animated.slideInUp
     .container.has-text-justified
       .content
-        no-ssr
-          DynamicMarkdown(
-            :render-func='renderFunc'
-            :static-render-funcs='staticRenderFuncs')
+        DynamicMarkdown(
+          :render-func='renderFunc'
+          :static-render-funcs='staticRenderFuncs')
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template lang="pug">
-nav.navbar.is-fixed-bottom.animated.slideInUp.is-transparent
+nav.navbar.is-fixed-bottom.is-transparent
   .container
-    .navbar-brand
+    .navbar-brand.animated.slideInUp
       nuxt-link.navbar-item.Eight_One(to='/')
         span(@click='isActive = false') &lt;ary&gt;
       nuxt-link.navbar-item(to='/blog')
@@ -17,6 +17,6 @@ nav.navbar.is-fixed-bottom.animated.slideInUp.is-transparent
 <script>
 // @vue/component
 export default {
-  name: 'Navbar'
+  name: 'NavBar'
 }
 </script>

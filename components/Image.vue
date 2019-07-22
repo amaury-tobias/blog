@@ -5,6 +5,7 @@ figure.image(:class='classes')
 
 <script>
 export default {
+  name: 'LazyImage',
   props: {
     src: {
       type: String,
