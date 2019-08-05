@@ -30,6 +30,7 @@
     "nuxt": "^2.8.1",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
+    "v-github-activity": "0.0.1-beta",
     "vue-github-activity": "^2.1.1",
     "vue-lazyload": "^1.3.1",
     "vue2-animate": "^2.1.0"

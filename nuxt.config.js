@@ -42,7 +42,7 @@ module.exports = {
     '~/plugins/axios.js',
     '~/plugins/lazyload.js',
     '~/plugins/lazyImage.js',
-    '~/plugins/vueGithubActivity.js'
+    { src: '~/plugins/vueGithubActivity.js', mode: 'client' }
   ],
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
