@@ -5,7 +5,7 @@ div
       .container.has-text-centered
         h1.is-size-1.is-uppercase Amaury.
         h2.subtitle.heading DESARROLLADOR WEB FULL-STACK
-  
+
   section#about.hero.is-fullheight-with-navbar.is-light
     .hero-body
       .container.has-text-left
@@ -35,7 +35,7 @@ div
                 br
                 span IOS Development Lab UANL
                 br
-                span Swift, iOS App Development 
+                span Swift, iOS App Development
               p.is-family-line-height.is-size-6.block
                 span.is-size-5 ◽ 2012 - 2015
                 br
@@ -112,7 +112,8 @@ div
     .hero-body
       .container
         #github.card
-          github-feed(login='amaury-tobias')
+          no-ssr
+            github-feed(login='amaury-tobias')
 
   footer.footer
     .content.has-text-weight-light.has-text-centered
@@ -120,11 +121,8 @@ div
         strong CONTACTO
         p Monterrey, México.
         p amaury.tobiasqr@gmail.com
-        p (488)-112-8398
       p
-        | Hecho con el ♥️ por&nbsp;
-        strong  Amaury Tobias&nbsp;
-        | utilizando Vue.js + Nuxt.
+        | Hecho con el ♥️ y Vue.js + Nuxt.
       a(href='https://bulma.io')
         v-img.image-footer(
           src='https://bulma.io/images/made-with-bulma--black.png'

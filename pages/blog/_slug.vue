@@ -1,16 +1,14 @@
 <template lang="pug">
 div
-  .hero.is-white.animated.slideInDown
-    .hero-body
-      .container.has-text-centered
-        h1.is-size-1.is-size-3-mobile.is-uppercase.has-text-weight-semibold {{ title }}
-        p.subtitle.heading {{ date }}
-  section.section.animated.slideInUp
-    .container.has-text-justified
-      .content
-        DynamicMarkdown(
-          :render-func='renderFunc'
-          :static-render-funcs='staticRenderFuncs')
+  .post
+    h3.subtitle.is-spaced.heading.date {{ date }}
+    h1.is-size-3.is-uppercase.title {{ title }}
+    section.animated.fadeIn
+      .container.has-text-left
+        .content
+          DynamicMarkdown(
+            :render-func='renderFunc'
+            :static-render-funcs='staticRenderFuncs')
 </template>
 
 <script>
@@ -38,9 +36,8 @@ export default {
       const { title, tags, date, author, image } = attr
 
       const options = {
-        weekday: 'long',
         year: 'numeric',
-        month: 'long',
+        month: 'short',
         day: 'numeric'
       }
 
@@ -64,3 +61,25 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.post {
+  max-width: 650px;
+  margin: 110px auto;
+  padding: 0 30px 50px;
+  position: relative;
+
+  .date {
+    font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
+    font-size: 13px;
+    color: #999;
+    margin: 0 0 30px;
+    letter-spacing: 1px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 45px;
+    letter-spacing: 1px;
+  }
+}
+</style>

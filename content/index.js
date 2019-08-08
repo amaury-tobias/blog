@@ -12,12 +12,13 @@ const getFiles = dir => {
     const image = fileContents.image
     const title = fileContents.title
     const description = fileContents.description
+    const author = fileContents.author
     const slug = file
       .split('.')
       .slice(0, -1)
       .join('.')
 
-    const obj = { date, slug, image, title, description }
+    const obj = { date, slug, image, title, description, author }
     fileList.push(obj)
   })
   return fileList

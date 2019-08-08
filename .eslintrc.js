@@ -11,7 +11,7 @@ module.exports = {
     '@nuxtjs',
     'plugin:nuxt/recommended',
     'plugin:prettier/recommended',
-    'prettier',
+    'prettier/standard',
     'prettier/vue'
   ],
   plugins: [

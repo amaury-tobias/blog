@@ -2,10 +2,10 @@
 nav.navbar.is-fixed-bottom.is-transparent
   .container
     .navbar-brand.animated.slideInUp
-      nuxt-link.navbar-item.Eight_One(to='/')
-        span(@click='isActive = false') &lt;ary&gt;
+      nuxt-link.navbar-item(to='/')
+        span AMAURY.
       nuxt-link.navbar-item(to='/blog')
-        fa(icon='blog')
+        fa(icon='rss')
       a.navbar-item(rel='me' href='https://github.com/amaury-tobias')
         fa(:icon="['fab', 'github']")
       a.navbar-item(rel='me' href='https://mstdn.mx/@amaury_tobias')

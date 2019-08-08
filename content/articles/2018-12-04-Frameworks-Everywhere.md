@@ -4,7 +4,7 @@ tags:
   - Dev
   - Day
 date: 2018-12-04 18:00:00
-author: Amaury Tobias Quiroz
+author: Amaury.
 ---
 
 > *Developers, developers developers, developers…👏👏👏*

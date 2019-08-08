@@ -24,9 +24,7 @@ export default {
     })
   },
   render(createElement) {
-    return this.templateRender
-      ? this.templateRender()
-      : createElement('div', 'Rendering')
+    return this.templateRender ? this.templateRender() : createElement('div', 'Rendering')
   }
 }
 </script>
@@ -34,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (min-width: 768px) {
   .dynamicContent {
-    max-width: 696px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -47,13 +45,13 @@ export default {
 
 pre {
   padding: 0 !important;
+  & > code {
+    padding: 1rem;
+    display: block;
+  }
 }
 
-code {
+:not(pre) > code {
   display: inline;
-}
-
-pre code {
-  display: block;
 }
 </style>

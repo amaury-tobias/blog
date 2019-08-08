@@ -5,9 +5,9 @@ div
       .container.has-text-centered.animated.fadeIn
         h1.is-size-1.title.is-uppercase POSTS
         h2.subtitle.heading UNKNOWN ME
-  .container.has-text-centered
+  .container.has-text-centered.animated.fadeIn
     span(v-for='(post, index) in posts' :key='index')
-      div.animated.fadeIn
+      p
         n-link(:to='`/blog/${post.slug}`') {{ post.title }}
 </template>
 

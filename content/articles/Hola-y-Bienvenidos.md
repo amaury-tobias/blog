@@ -2,6 +2,7 @@
 title: Netlify CMS
 description: Entrada de prueba desde el CMS de netlify
 date: 2019-06-21T11:14:00.000Z
+author: Amaury.
 ---
 
 Una entrada desde el CMS de Netlify, para probar su editor de `Markdown` y la manera en que se comporta con un sitio generado mediante Nuxt.js

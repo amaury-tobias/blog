@@ -3,7 +3,7 @@ title: Día de Muertos!!!!
 tags:
   - Day
 date: 2018-10-31 18:00:00
-author: Amaury Tobias Quiroz
+author: Amaury.
 ---
 
 Para ir al espacio dedicado al día de muertos puedes dar clic [aquí], este es espacio de blog y básicamente es solo para hablar (¿escribir?) lo que básicamente se me ocurra y pues solo es que el día de muertos esta todo bonito pero este año como pues voy a estar lejos del “ranchito” y en NL no hay mucho que ver al respecto (solo ver o ver solo, que hacer da paja y nah).
