@@ -2,13 +2,14 @@
 div
   .post
     h3.subtitle.is-spaced.heading.date {{ date }}
-    h1.is-size-3.is-uppercase.title {{ title }}
+    h1.is-uppercase {{ title }}
     section.animated.fadeIn
       .container.has-text-left
         .content
           DynamicMarkdown(
             :render-func='renderFunc'
             :static-render-funcs='staticRenderFuncs')
+          n-link#older.blog-nav(to='/blog') ATRÁS
 </template>
 
 <script>
@@ -42,7 +43,7 @@ export default {
       }
 
       const publishedDate = new Date(date)
-      const published = publishedDate.toLocaleDateString('es-ES', options)
+      const published = publishedDate.toLocaleString('es', options)
 
       return {
         title,
@@ -64,8 +65,13 @@ export default {
 
 <style lang="scss" scoped>
 .post {
+  @media only screen and (min-device-width: 768px) {
+    margin: 110px auto;
+  }
+  @media only screen and (max-device-width: 768px) {
+    margin: 80px auto;
+  }
   max-width: 650px;
-  margin: 110px auto;
   padding: 0 30px 50px;
   position: relative;
 
@@ -81,5 +87,36 @@ export default {
     margin: 0 0 45px;
     letter-spacing: 1px;
   }
+}
+.blog-nav {
+  position: fixed;
+  height: 20px;
+  line-height: 20px;
+  font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  // border-bottom: 3px solid transparent;
+
+  @media only screen and (min-device-width: 768px) {
+    right: 2rem;
+    bottom: 80px;
+  }
+
+  @media only screen and (max-device-width: 768px) {
+    position: absolute;
+  }
+}
+#older {
+  right: 40px;
+  @media only screen and (max-device-width: 768px) {
+    right: 0px;
+  }
+}
+#newer {
+  @media only screen and (max-device-width: 768px) {
+    left: 0px;
+  }
+  left: 40px;
 }
 </style>

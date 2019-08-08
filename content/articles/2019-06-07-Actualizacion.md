@@ -1,9 +1,7 @@
 ---
 title: Actualización
-date: 2019-06-07 15:09:14
-tags:
-  - Day
 author: Amaury.
+date: 2019-06-07 15:09:14
 ---
 
 ## He Vuelto

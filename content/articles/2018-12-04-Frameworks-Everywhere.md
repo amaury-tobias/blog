@@ -1,10 +1,7 @@
 ---
 title: Frameworks Everywhere
-tags:
-  - Dev
-  - Day
-date: 2018-12-04 18:00:00
 author: Amaury.
+date: 2018-12-04 18:00:00
 ---
 
 > *Developers, developers developers, developers…👏👏👏*

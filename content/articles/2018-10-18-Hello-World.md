@@ -1,10 +1,7 @@
 ---
 title: Hello World!
-tags:
-  - Day
-  - Jekyll
-date: 2018-10-18 19:00:00
 author: Amaury.
+date: 2018-10-18 19:00:00
 ---
 
 > print(“Hello World!”);
