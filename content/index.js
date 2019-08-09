@@ -6,6 +6,8 @@ const getFiles = dir => {
   const fileList = []
 
   files.forEach(file => {
+    if (file.split('.').pop() !== 'md') return
+
     const markdownFile = fs.readFileSync(`${dir}${file}`, 'utf-8')
     const fileContents = parseMarkdown(markdownFile)
     const date = fileContents.date
