@@ -1,4 +1,6 @@
 const path = require('path')
+const Mode = require('frontmatter-markdown-loader/mode')
+
 const articles = require('./content/articles.json')
 
 const dynamicRoutes = generateDynamicRoutes(articles)
@@ -64,6 +66,7 @@ module.exports = {
         loader: 'frontmatter-markdown-loader',
         include: path.resolve(__dirname, 'content/articles'),
         options: {
+          mode: [Mode.VUE_RENDER_FUNCTIONS],
           vue: {
             root: 'dynamicContent'
           }
