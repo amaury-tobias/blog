@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: 'Roboto', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, serif;
   text-rendering: optimizelegibility;
@@ -9,6 +10,11 @@ body {
   font-size: 16px;
   word-spacing: 1px;
   color: #666 !important;
+
+  ::selection {
+    background: #f66;
+    color: #fff;
+  }
 }
 
 h1,
@@ -47,7 +53,7 @@ $content-blockquote-padding: 0.5rem 1rem;
 $content-blockquote-border-left: 5px solid #f66;
 
 .post {
-  & > h1 {
+  > h1 {
     margin: 0 0 45px;
     letter-spacing: 1px;
   }

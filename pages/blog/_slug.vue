@@ -2,7 +2,7 @@
 div
   .post
     h3.subtitle.is-spaced.heading.date {{ date }}
-    h1.is-uppercase {{ title }}
+    h1.is-uppercase.is-size-4-mobile.is-size-2-tablet {{ title }}
     section.animated.fadeIn
       .container.has-text-left
         .content
@@ -83,9 +83,7 @@ export default {
     letter-spacing: 1px;
   }
   h1 {
-    font-size: 32px;
     margin: 0 0 45px;
-    letter-spacing: 1px;
   }
 }
 .blog-nav {

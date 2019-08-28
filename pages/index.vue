@@ -124,9 +124,10 @@ div
       p
         | Hecho con el ♥️ y Vue.js + Nuxt.
       a(href='https://bulma.io')
-        v-img.image-footer(
-          src='https://bulma.io/images/made-with-bulma--black.png'
-          classes='is-128x24')
+        figure.image(class='is-128x24')
+          img(v-lazy='"https://bulma.io/images/made-with-bulma--black.png"')
+          noscript
+            img(src='https://bulma.io/images/made-with-bulma--black.png')
 </template>
 
 <style scoped>
