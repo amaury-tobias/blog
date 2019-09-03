@@ -1,0 +1,29 @@
+name: Node.js test and npm publish
+
+on: release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          version: 12
+      - run: npm ci
+      - run: npm test
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          version: 12
+      - uses: sebastianpopp/git-ftp-action@1.0.0
+      - run: npm i
+      - run: npm run generate
+        env:
+          FTP_DEST: ftp://demo.wftpserver.com/upload
+        secrets: ["FTP_PWD", "FTP_USER"]
