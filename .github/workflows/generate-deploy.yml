@@ -1,17 +1,23 @@
-name: Node.js test and npm publish
-
-on: push
-
+name: Generate and Deploy
+on: [push]
 jobs:
-  deploy:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate Step
-        uses: actions/checkout@master
+      - uses: actions/checkout@master
+
+      - name: Set Node.js 12.x
         uses: actions/setup-node@v1
-        - run: npm install
-        - run: npm run generate
-      - name: Deploy Step
+        with:
+          version: 12.x
+      
+      - name: npm install
+        run: npm install
+      
+      - name: npm generate
+        run: npm run generate
+      
+      - name: Deploy to FTP
         uses: sebastianpopp/git-ftp-action@1.0.0
         env:
           FTP_DEST: ftp://demo.wftpserver.com/upload
