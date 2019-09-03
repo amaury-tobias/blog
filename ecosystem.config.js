@@ -20,8 +20,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:amaury-tobias/blog_v2.git',
       path: '/home/amaurytobias/production/blog_v2',
-      'post-deploy':
-        'npm install && npm run generate && pm2 reload ecosystem.config.js'
+      'post-deploy': 'npm install && npm run generate && pm2 reload ecosystem.config.js'
     }
   }
 }
