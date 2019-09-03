@@ -10,16 +10,20 @@ jobs:
         uses: actions/setup-node@v1
         with:
           version: 12.x
-      
+
       - name: npm install
         run: npm install
-      
+
       - name: npm generate
         run: npm run generate
-      
+
+      - name: List output files
+        run: ls
+
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@master
         env:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          REMOTE_DIR: upload
