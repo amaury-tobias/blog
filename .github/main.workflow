@@ -1,11 +1,11 @@
 workflow "Build and Deploy Pages" {
-  on = "push"
   resolves = ["Build", "Deploy Pages"]
+  on = "push"
 }
 
 action "Build" {
   uses = "actions/setup-node@v1"
-  run = "npm run generate"
+  runs = "npm run generate"
 }
 
 action "Deploy Pages" {
