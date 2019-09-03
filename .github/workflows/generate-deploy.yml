@@ -1,20 +1,9 @@
 name: Node.js test and npm publish
 
-on: release
+on: push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-        with:
-          version: 12
-      - run: npm ci
-      - run: npm test
-
-  publish-npm:
-    needs: build
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
