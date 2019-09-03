@@ -15,4 +15,5 @@ jobs:
       - run: npm run generate
         env:
           FTP_DEST: ftp://demo.wftpserver.com/upload
-        secrets: ["FTP_PWD", "FTP_USER"]
+          FTP_PWD: ${{secrets.FTP_PWD}}
+          FTP_USER: ${{secrets.FTP_USER}}
