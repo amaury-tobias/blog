@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: sebastianpopp/git-ftp-action@1.0.0
       env:
-        - FTP_DEST: 'demo.wftpserver.com/upload'
-        - FTP_PWD: 'demo-user'
-        - FTP_USER: 'demo-user'
+        FTP_DEST: 'demo.wftpserver.com/upload'
+        FTP_PWD: 'demo-user'
+        FTP_USER: 'demo-user'
