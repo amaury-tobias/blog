@@ -18,8 +18,8 @@ jobs:
         run: npm run generate
       
       - name: Deploy to FTP
-        uses: sebastianpopp/git-ftp-action@1.0.0
+        uses: SamKirkland/FTP-Deploy-Action@master
         env:
-          FTP_DEST: ftp://demo.wftpserver.com/upload
-          FTP_PWD: ${{secrets.FTP_PWD}}
-          FTP_USER: ${{secrets.FTP_USER}}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
