@@ -6,13 +6,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-        with:
-          version: 12
-      - uses: sebastianpopp/git-ftp-action@1.0.0
-      - run: npm i
-      - run: npm run generate
+      - name: Generate Step
+        uses: actions/checkout@master
+        uses: actions/setup-node@v1
+          with:
+            version: 12
+        - run: npm install
+        - run: npm run generate
+      - name: Deploy Step
+        uses: sebastianpopp/git-ftp-action@1.0.0
         env:
           FTP_DEST: ftp://demo.wftpserver.com/upload
           FTP_PWD: ${{secrets.FTP_PWD}}
