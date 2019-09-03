@@ -23,7 +23,8 @@ jobs:
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@master
         env:
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: demo-user
+          FTP_SERVER: demo.wftpserver.com
+          FTP_USERNAME: demo-user
           REMOTE_DIR: upload
+          LOCAL_DIR: dist
