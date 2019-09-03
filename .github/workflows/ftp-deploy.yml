@@ -12,8 +12,9 @@ jobs:
       - run: npm run generate
   deploy:
     needs: generate
-    uses: sebastianpopp/git-ftp-action@1.0.0
-    env:
-      - FTP_DEST: 'demo.wftpserver.com/upload'
-      - FTP_PWD: 'demo-user'
-      - FTP_USER: 'demo-user'
+    steps:
+    - uses: sebastianpopp/git-ftp-action@1.0.0
+      env:
+        - FTP_DEST: 'demo.wftpserver.com/upload'
+        - FTP_PWD: 'demo-user'
+        - FTP_USER: 'demo-user'
