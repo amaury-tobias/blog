@@ -112,8 +112,7 @@ div
     .hero-body
       .container
         #github.card
-          no-ssr
-            github-feed(login='amaury-tobias')
+          github-feed(login='amaury-tobias' token='b7bcaf0c889a75f2b7d4e9567e1768a68e0d2712')
 
   footer.footer
     .content.has-text-weight-light.has-text-centered

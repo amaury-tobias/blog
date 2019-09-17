@@ -31,8 +31,8 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   loading: {
-    color: '#000000',
-    height: '3px'
+    color: 'black',
+    height: '5px'
   },
   css: [
     '~/assets/main.scss',
