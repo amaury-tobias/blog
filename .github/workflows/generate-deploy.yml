@@ -1,7 +1,11 @@
-name: Generate and Deploy
-on: [push]
+name: Generate and Deploy GH Pages
+on:
+  push:
+    branches:
+    - master
+
 jobs:
-  run:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -20,11 +24,9 @@ jobs:
       - name: List output files
         run: ls
 
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@master
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.3.1
         env:
-          FTP_PASSWORD: demo-user
-          FTP_SERVER: demo.wftpserver.com
-          FTP_USERNAME: demo-user
-          REMOTE_DIR: upload
-          LOCAL_DIR: dist
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist
