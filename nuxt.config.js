@@ -4,14 +4,14 @@ const Mode = require('frontmatter-markdown-loader/mode')
 const articles = require('./content/articles.json')
 
 const dynamicRoutes = generateDynamicRoutes(articles)
-
+/*
 const routeGH =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         base: '/blog/'
       }
     : {}
-
+*/
 module.exports = {
   server: {
     port: 3000
@@ -21,8 +21,8 @@ module.exports = {
   },
   mode: 'universal',
   router: {
-    linkActiveClass: 'is-active',
-    ...routeGH
+    linkActiveClass: 'is-active'
+    // ...routeGH
   },
   head: {
     htmlAttrs: { lang: 'es', class: 'has-navbar-fixed-bottom' },
