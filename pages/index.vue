@@ -112,7 +112,7 @@ div
     .hero-body
       .container
         #github.card
-          github-feed(login='amaury-tobias' token='b7bcaf0c889a75f2b7d4e9567e1768a68e0d2712')
+          github-feed(login='amaury-tobias')
 
   footer.footer
     .content.has-text-weight-light.has-text-centered
