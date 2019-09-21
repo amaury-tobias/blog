@@ -11,6 +11,7 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "node content/index.js && nuxt generate",
+    "generate:gh-pages": "node content/index.js && cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "articles": "nodemon --ext md --watch content --watch content/index.js content/index.js"
   },
   "dependencies": {

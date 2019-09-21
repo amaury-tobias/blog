@@ -19,7 +19,7 @@ jobs:
         run: npm install
 
       - name: npm generate
-        run: npm run generate
+        run: npm run generate:gh-pages
 
       - name: List output files
         run: ls
