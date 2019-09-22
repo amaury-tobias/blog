@@ -45,7 +45,7 @@ div
             p.subtitle.heading Lugares donde he trabajado
             .has-text-weight-light
               p.is-family-line-height.is-size-6.block
-                span.is-size-5 ◽ 2018 - Presente
+                span.is-size-5 ◽ 01/2018 - 09/2019
                 br
                 span Centro de Servicios en Informática
                 br

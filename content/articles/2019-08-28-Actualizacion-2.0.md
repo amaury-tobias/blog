@@ -15,7 +15,7 @@ Aunque evidentemente su nombre habla mucho de su funcionalidad, igualmente expli
 
 El segundo (v-avatar) es un componente que permite crear una “imagen de perfil” en base a el nombre de usuario como se puede ver aquí con el nombre “Amaury Tobías Quiroz”
 
-<v-img src='images/v-avatar-1.PNG' :size='128'/>
+<v-img src='/images/v-avatar-1.PNG' :size='128'/>
 
 Tiene más cosas bonitas, pero para eso está su propia página de [documentación](https://amaury-tobias.github.io/v-avatar/) en donde muchas más cosas son explicadas a detalle.
 
