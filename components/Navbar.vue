@@ -5,15 +5,15 @@ nav.animated.slideInUp.shadow.z-50(:class='{ dark: darkMode }')
       nuxt-link(to='/').navbar-brand
         span AMAURY.
       nuxt-link(to='/blog').navbar-item
-        fa(icon='rss')
+        fa(icon='rss').h-4.w-4
       a(rel='me' href='https://github.com/amaury-tobias').navbar-item
-        fa(:icon="['fab', 'github']")
+        fa(:icon="['fab', 'github']").h-4.w-4
       a(rel='me' href='https://mstdn.mx/@amaury_tobias').navbar-item
-        fa(:icon="['fab', 'mastodon']")
+        fa(:icon="['fab', 'mastodon']").h-4.w-4
       a(rel='me' href='https://twitter.com/amaury_tobias').navbar-item
-        fa(:icon="['fab', 'twitter']")
+        fa(:icon="['fab', 'twitter']").h-4.w-4
       span(@click='darkMode = !darkMode').navbar-item.cursor-pointer
-        fa(icon='moon')
+        fa(icon='moon').h-4.w-4
 </template>
 
 <script>
