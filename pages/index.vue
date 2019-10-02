@@ -45,21 +45,17 @@
               span Centro de Servicios en Informática
               br
               a http://www.csi.uanl.mx/
-          .my-2
-              span.text-base.uppercase Veranos
-              br
-              span Atención al cliente, ventas de mostrador
 
   section#proyectos.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
       .text-left.md_text-right.mb-4
-        p.text-3xl.uppercase.title Proyectos
+        p.text-3xl.uppercase.title Proyectos personales
       .my-2.text-center
         a(href='https://amaury-tobias.github.io/v-avatar/').text-2xl v-avatar
           v-img(src='/images/v-avatar-1.PNG' :size='128')
       .my-2.text-center
         a(href='https://amaury-tobias.github.io/v-github-activity/').text-2xl v-github-activity
-          img(src='/images/v-github-activity.png' alt='/images/v-github-activity.png')
+          img(src='/images/v-github-activity.png' alt='/images/v-github-activity.png').mx-auto
 
   section#skills.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
