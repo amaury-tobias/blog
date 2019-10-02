@@ -1,5 +1,5 @@
 <template lang="pug">
-li.has-text-justified
+li
   h2
     n-link(:to='`/blog/${post.slug}`') {{ post.title }}
   h4 {{ parseDate(post.date) }}
@@ -7,7 +7,7 @@ li.has-text-justified
 
 <script>
 export default {
-  name: 'Post',
+  name: 'BlogEntryItem',
   props: { post: { type: Object, required: true } },
   methods: {
     parseDate: date => {
@@ -21,36 +21,61 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
+body {
+  &.dark {
+    a {
+      &::after {
+        @apply bg-purple-500;
+      }
+    }
+  }
+
+  &:not(.dark) {
+    a {
+      &::after {
+        @apply bg-red-500;
+      }
+    }
+  }
+}
+
 li {
-  padding: 0.8rem 0 0.8rem;
-  position: relative;
+  @apply py-4;
+  @apply relative;
+  @apply uppercase;
   h4 {
-    font-size: 0.7rem;
-    color: #999;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    @apply text-gray-500;
+    @apply tracking-wider;
+    @apply text-xs;
   }
   h2 {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    @apply text-gray-600;
+    @apply text-xl;
+    @apply tracking-wider;
   }
   a {
-    text-decoration: none;
-    position: relative;
+    @apply no-underline;
+    @apply relative;
+  }
+}
+
+a {
+  z-index: 1;
+
+  &::after {
+    @apply absolute;
+    z-index: -1;
+    content: '';
+    top: 88%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 0;
+    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  }
+  &:hover {
+    @apply text-gray-800;
     &::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 88%;
-      left: -0.1em;
-      right: -0.1em;
-      bottom: 0;
-      transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-      background-color: #f66;
-    }
-    &:hover::after {
       top: 0%;
     }
   }

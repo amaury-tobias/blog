@@ -29,18 +29,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss">
 @media only screen and (min-width: 768px) {
   .dynamicContent {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-.content figure {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
 }
 
 pre {

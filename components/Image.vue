@@ -46,9 +46,9 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="postcss">
 .image-container {
-  display: flex;
+  @apply flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;

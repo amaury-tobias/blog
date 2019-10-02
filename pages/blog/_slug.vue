@@ -1,15 +1,15 @@
 <template lang="pug">
-div
-  .post
-    h3.subtitle.is-spaced.heading.date {{ date }}
-    h1.is-uppercase.is-size-4-mobile.is-size-2-tablet {{ title }}
-    section.animated.fadeIn
-      .container.has-text-left
-        .content
-          DynamicMarkdown(
-            :render-func='renderFunc'
-            :static-render-funcs='staticRenderFuncs')
-          n-link#older.blog-nav(to='/blog') ATRÁS
+.animated.fadeIn.min-h-full.w-full.font-light.py-24
+  .container.mx-auto.px-12.md_px-32.lg_px-40
+    h3.text-sm.md_text-base {{ date }}
+    h1.break-words.text-2xl.md_text-4xl {{ title }}
+    section
+      .container.text-left.content
+        DynamicMarkdown(
+          :render-func='renderFunc'
+          :static-render-funcs='staticRenderFuncs')
+        .relative.pt-8
+          n-link.absolute.right-0.bottom-0(to='/blog') ATRÁS
 </template>
 
 <script>
@@ -63,58 +63,41 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.post {
-  @media only screen and (min-device-width: 768px) {
-    margin: 110px auto;
-  }
-  @media only screen and (max-device-width: 768px) {
-    margin: 80px auto;
-  }
-  max-width: 650px;
-  padding: 0 30px 50px;
-  position: relative;
-
-  .date {
-    font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
-    font-size: 13px;
-    color: #999;
-    margin: 0 0 30px;
-    letter-spacing: 1px;
-  }
-  h1 {
-    margin: 0 0 45px;
-  }
-}
-.blog-nav {
-  position: fixed;
-  height: 20px;
-  line-height: 20px;
-  font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
-  font-size: 15px;
-  text-decoration: none;
-  letter-spacing: 1px;
-  // border-bottom: 3px solid transparent;
-
-  @media only screen and (min-device-width: 768px) {
-    right: 2rem;
-    bottom: 80px;
+<style lang="postcss">
+body {
+  &.dark {
+    .content a {
+      @apply no-underline;
+      @apply text-purple-500;
+      &:hover {
+        @apply text-purple-400;
+      }
+    }
   }
 
-  @media only screen and (max-device-width: 768px) {
-    position: absolute;
+  &:not(.dark) {
+    .content a {
+      @apply no-underline;
+      @apply text-red-500;
+      &:hover {
+        @apply text-red-400;
+      }
+    }
   }
 }
-#older {
-  right: 40px;
-  @media only screen and (max-device-width: 768px) {
-    right: 0px;
-  }
+
+ul {
+  @apply list-disc;
+  @apply list-inside;
+  @apply my-4;
 }
-#newer {
-  @media only screen and (max-device-width: 768px) {
-    left: 0px;
-  }
-  left: 40px;
+h3 {
+  @apply text-gray-500;
+  @apply tracking-wider;
+  @apply uppercase;
+}
+h1 {
+  @apply uppercase;
+  @apply mb-4;
 }
 </style>

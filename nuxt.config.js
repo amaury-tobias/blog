@@ -14,7 +14,7 @@ module.exports = {
   },
   mode: 'universal',
   router: {
-    linkActiveClass: 'is-active'
+    linkExactActiveClass: 'link-active'
   },
   head: {
     htmlAttrs: { lang: 'es', class: 'has-navbar-fixed-bottom' },
@@ -35,7 +35,8 @@ module.exports = {
     height: '5px'
   },
   css: [
-    '~/assets/main.scss',
+    // '~/assets/main.scss',
+    '~/assets/css/tailwind.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
     'vue2-animate/dist/vue2-animate.min.css'
   ],
@@ -47,17 +48,26 @@ module.exports = {
     '~/plugins/vueGithubActivity.js'
   ],
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/tailwindcss',
+    'nuxt-purgecss',
     '@nuxtjs/axios',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module'
   ],
   axios: {},
+  purgeCSS: {
+    mode: 'postcss'
+  },
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
+    cssPath: '~/assets/css/tailwind.css'
+  },
   build: {
+    extractCSS: true,
     postcss: {
+      plugins: { 'postcss-nested': {} },
       preset: {
-        features: {
-          customProperties: false
-        }
+        autoprefixer: true
       }
     },
     extend(config, ctx) {

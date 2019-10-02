@@ -1,8 +1,8 @@
 <template lang="pug">
-  div
-    nav-bar
-    main
-      nuxt
+div
+  nav-bar.fixed.inset-x-0.bottom-0
+  main
+    nuxt
 </template>
 
 <script>
