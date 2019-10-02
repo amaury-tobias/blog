@@ -59,7 +59,7 @@
           v-img(src='/images/v-avatar-1.PNG' :size='128')
       .my-2.text-center
         a(href='https://amaury-tobias.github.io/v-github-activity/').text-2xl v-github-activity
-          img(v-lazy='"/images/v-github-activity.PNG"' src='/images/v-github-activity.PNG' alt='/images/v-github-activity.PNG')
+          img(v-lazy='"/images/v-github-activity.png"')
 
   section#skills.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
