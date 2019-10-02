@@ -1,10 +1,9 @@
 <template lang="pug">
-div
-  .hero.is-medium.animated.slideInDown.portada
-    .hero-body
-      .container.has-text-centered
-        h1.is-size-1.title.is-uppercase 404
-        n-link(to='/') Inicio
+.animated.fadeIn.font-light
+  section.mx-auto.px-12.md_px-32.lg_px-40
+    .min-h-screen.flex.justify-center.items-center.flex-col
+      h1.uppercase.text-4xl.title 404.
+      n-link(to='/').text-2xl Inicio
 </template>
 
 <script>

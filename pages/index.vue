@@ -50,6 +50,17 @@
               br
               span Atención al cliente, ventas de mostrador
 
+  section#proyectos.mx-auto.px-12.md_px-32.lg_px-40
+    .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
+      .text-left.md_text-right.mb-4
+        p.text-3xl.uppercase.title Proyectos
+      .my-2.text-center
+        a(href='https://amaury-tobias.github.io/v-avatar/').text-2xl v-avatar
+          v-img(src='/images/v-avatar-1.PNG' :size='128')
+      .my-2.text-center
+        a(href='https://amaury-tobias.github.io/v-github-activity/').text-2xl v-github-activity
+          img(v-lazy='"/images/v-github-activity.PNG"')
+
   section#skills.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
       .text-left.md_text-right.mb-4
