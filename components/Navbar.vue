@@ -27,7 +27,7 @@ export default {
     }
   },
   beforeMount() {
-    this.darkMode = JSON.parse(localStorage.getItem('darkMode') || false)
+    this.darkMode = JSON.parse(localStorage.getItem('darkMode'))
     this.$store.dispatch('theme/setDarkMode', this.darkMode)
   }
 }

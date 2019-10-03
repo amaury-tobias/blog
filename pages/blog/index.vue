@@ -5,7 +5,7 @@
     h1.break-words.text-2xl.md_text-4xl UNKNOWN ME
     .flex.items-center.justify-start
       ul.list-none
-        blog-entry-item(:post='post' v-for='(post, index) in posts' :key='index')
+        li(is='blog-entry-item' :post='post' v-for='post in posts' :key='post.title')
 </template>
 
 <script>

@@ -42,7 +42,7 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/fontawesome.js',
-    '~/plugins/axios.js',
+    // '~/plugins/axios.js',
     '~/plugins/lazyload.js',
     '~/plugins/lazyImage.js',
     '~/plugins/vueGithubActivity.js'

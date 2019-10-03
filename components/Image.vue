@@ -1,8 +1,6 @@
 <template lang="pug">
 .image-container(:style='$justify')
   img.image.js(v-lazy='src' :style='$size')
-  noscript
-    img.image(:src='src' :style='$size')
 </template>
 
 <script>
@@ -13,13 +11,9 @@ export default {
       type: String,
       default: ''
     },
-    aspect: {
-      type: String,
-      default: null
-    },
     size: {
       type: Number,
-      default: 100
+      default: null
     },
     start: {
       type: Boolean,
@@ -32,10 +26,7 @@ export default {
   },
   computed: {
     $size() {
-      // eslint-disable-next-line no-eval
-      const width = eval(`${this.size} * ${this.aspect}`)
-      if (this.aspect) return `height:${this.size}px; width: ${width}px;`
-      else return `height:${this.size}px; width: ${this.size}px;`
+      return this.size ? `height:${this.size}px; width: ${this.size}px;` : null
     },
     $justify() {
       if (this.start) return 'justify-content: flex-start;'
@@ -49,12 +40,12 @@ export default {
 <style scoped lang="postcss">
 .image-container {
   @apply flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin: 2rem 0;
+  @apply flex-row;
+  @apply flex-no-wrap;
+  @apply justify-center;
+  @apply items-center;
+  @apply content-center;
+  @apply my-4;
 }
 
 img {

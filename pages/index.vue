@@ -1,11 +1,11 @@
 <template lang="pug">
 .animated.fadeIn.font-light.pb-24
-  section#head.mx-auto.px-12.md_px-32.lg_px-40
+  #head.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.justify-center.items-center.flex-col
       h1.uppercase.text-4xl Amaury.
       h2 DESARROLLADOR WEB
 
-  section#about.mx-auto.px-12.md_px-32.lg_px-40
+  #about.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
       .text-left.md_text-right.mb-4
         p.text-3xl.uppercase.title Acerca de mi
@@ -14,7 +14,7 @@
           p.my-2 Mi interés por la programación comenzó durante el bachillerato con las tecnologías de Java y TurboPascal2000, llevadas de manera curricular, y más adelante aprendí a crear pequeñas aplicaciones para Windows Mobile de manera autodidacta.
           p.my-2 Actualmente curso el Séptimo semestre de la Licenciatura en Multimedia y Animación Digital (LMAD) en la Universidad Autónoma de Nuevo León (UANL), en donde de manera tanto individual como en colaboración con mis compañeros desarrollo proyectos con fines educativos y de uso propio.
 
-  section#eduexp.mx-auto.px-12.md_px-32.lg_px-40
+  #eduexp.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen
       .flex.items-stretch.justify-center.items-start.flex-col
         .flex.flex-col.items-stretch.justify-center.items-center
@@ -46,18 +46,18 @@
               br
               a http://www.csi.uanl.mx/
 
-  section#proyectos.mx-auto.px-12.md_px-32.lg_px-40
+  #proyectos.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
       .text-left.md_text-right.mb-4
         p.text-3xl.uppercase.title Proyectos personales
       .my-2.text-center
         a(href='https://amaury-tobias.github.io/v-avatar/').text-2xl v-avatar
-          v-img(src='/images/v-avatar-1.PNG' :size='128')
+          v-img(src='/images/v-avatar-1.PNG')
       .my-2.text-center
         a(href='https://amaury-tobias.github.io/v-github-activity/').text-2xl v-github-activity
-          img(src='/images/v-github-activity.png' alt='/images/v-github-activity.png').mx-auto
+          v-img(src='/images/v-github-activity.png')
 
-  section#skills.mx-auto.px-12.md_px-32.lg_px-40
+  #skills.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
       .text-left.md_text-right.mb-4
         p.text-3xl.uppercase.title Habilidades
@@ -96,21 +96,24 @@
         span.text-2xl CI/CD:&nbsp;
         span.text-sm Travis CI · Github Actions
 
-  section#github.mx-auto.px-0.md_px-32.lg_px-40.my-4
-    github-feed(login='amaury-tobias')
+  #github.mx-auto.px-0.md_px-32.lg_px-40.my-4
+    github-feed(login='amaury-tobias' @status='ghStatus')
 
   footer.footer
-    p
+    div
       strong.text-xl CONTACTO
       p Monterrey, México.
       p amaury.tobiasqr@gmail.com
-    p
-      | Hecho con el ♥️ y Vue.js + Nuxt.
+    p Hecho con el ♥️ y Vue.js + Nuxt.
 </template>
 
 <script>
 export default {
-  name: 'Index'
+  name: 'Index',
+  methods: {
+    // eslint-disable-next-line no-console
+    ghStatus: (done, e) => console.log(done, e)
+  }
 }
 </script>
 
