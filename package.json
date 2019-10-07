@@ -52,7 +52,6 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.2.3",
     "nodemon": "^1.19.3",
-    "nuxt-purgecss": "^0.2.1",
     "postcss-nested": "^4.1.2",
     "prettier": "^1.18.2",
     "stylelint": "^11.0.0",

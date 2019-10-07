@@ -47,27 +47,16 @@ module.exports = {
     '~/plugins/lazyImage.js',
     '~/plugins/vueGithubActivity.js'
   ],
-  modules: [
-    '@nuxtjs/tailwindcss',
-    'nuxt-purgecss',
-    '@nuxtjs/axios',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module'
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+  buildModules: ['@nuxtjs/tailwindcss'],
   axios: {},
-  purgeCSS: {
-    mode: 'postcss'
-  },
-  tailwindcss: {
-    configPath: '~/tailwind.config.js',
-    cssPath: '~/assets/css/tailwind.css'
-  },
   build: {
+    // isDev analyze: true,
     extractCSS: true,
     postcss: {
       plugins: { 'postcss-nested': {} },
       preset: {
-        autoprefixer: true
+        autoprefixer: {}
       }
     },
     extend(config, ctx) {
