@@ -10,12 +10,10 @@ hljs.registerLanguage('xml', xml)
 
 export default {
   // eslint-disable-next-line vue/require-prop-types
-  props: ['renderFunc', 'staticRenderFuncs', 'extraComponent'],
+  props: ['renderFunc', 'staticRenderFuncs'],
   created() {
-    // eslint-disable-next-line no-new-func
-    this.templateRender = new Function(this.renderFunc)()
-    // eslint-disable-next-line no-new-func
-    this.$options.staticRenderFns = new Function(this.staticRenderFuncs)()
+    this.templateRender = this.renderFunc
+    this.$options.staticRenderFns = this.staticRenderFuncs
   },
   mounted() {
     const targets = document.querySelectorAll('code')
@@ -24,7 +22,7 @@ export default {
     })
   },
   render(createElement) {
-    return this.templateRender ? this.templateRender() : createElement('div', 'Rendering')
+    return this.templateRender ? this.templateRender() : createElement('div', 'error')
   }
 }
 </script>

@@ -6,6 +6,9 @@ const articles = require('./content/articles.json')
 const dynamicRoutes = generateDynamicRoutes(articles)
 
 module.exports = {
+  router: {
+    base: '/blog/'
+  },
   server: {
     port: 3000
   },

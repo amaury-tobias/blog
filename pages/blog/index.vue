@@ -14,6 +14,7 @@ import BlogEntryItem from '~/components/Blog/BlogEntryItem.vue'
 
 export default {
   components: { BlogEntryItem },
+  asyncData: () => ({ posts }),
   head: () => ({
     title: 'Posts',
     meta: [
@@ -23,7 +24,6 @@ export default {
         content: 'Posts'
       }
     ]
-  }),
-  asyncData: () => ({ posts })
+  })
 }
 </script>
