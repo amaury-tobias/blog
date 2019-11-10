@@ -15,12 +15,12 @@ export default {
     this.templateRender = this.renderFunc
     this.$options.staticRenderFns = this.staticRenderFuncs
   },
-  mounted() {
-    const targets = document.querySelectorAll('code')
-    targets.forEach(target => {
-      hljs.highlightBlock(target)
-    })
-  },
+  // mounted() {
+  // const targets = document.querySelectorAll('code')
+  // targets.forEach(target => {
+  // hljs.highlightBlock(target)
+  // })
+  // },
   render(createElement) {
     return this.templateRender ? this.templateRender() : createElement('div', 'error')
   }
