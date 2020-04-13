@@ -7,15 +7,14 @@ const dynamicRoutes = generateDynamicRoutes(articles)
 
 module.exports = {
   server: {
-    port: 3000
+    port: 3000,
   },
   generate: {
-    routes: dynamicRoutes
+    routes: dynamicRoutes,
   },
   mode: 'universal',
   router: {
-    base: '/blog/',
-    linkExactActiveClass: 'link-active'
+    linkExactActiveClass: 'link-active',
   },
   head: {
     htmlAttrs: { lang: 'es', class: 'has-navbar-fixed-bottom' },
@@ -26,27 +25,27 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   loading: {
     color: 'black',
-    height: '5px'
+    height: '5px',
   },
   css: [
     // '~/assets/main.scss',
     '~/assets/css/tailwind.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
-    'vue2-animate/dist/vue2-animate.min.css'
+    'vue2-animate/dist/vue2-animate.min.css',
   ],
   plugins: [
     '~/plugins/fontawesome.js',
     // '~/plugins/axios.js',
     '~/plugins/lazyload.js',
     '~/plugins/lazyImage.js',
-    '~/plugins/vueGithubActivity.js'
+    '~/plugins/vueGithubActivity.js',
   ],
   modules: ['@nuxtjs/axios', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
   buildModules: ['@nuxtjs/tailwindcss'],
@@ -57,8 +56,8 @@ module.exports = {
     postcss: {
       plugins: { 'postcss-nested': {} },
       preset: {
-        autoprefixer: {}
-      }
+        autoprefixer: {},
+      },
     },
     extend(config, ctx) {
       config.module.rules.push({
@@ -68,14 +67,14 @@ module.exports = {
         options: {
           mode: [Mode.VUE_RENDER_FUNCTIONS],
           vue: {
-            root: 'dynamicContent'
-          }
-        }
+            root: 'dynamicContent',
+          },
+        },
       })
-    }
-  }
+    },
+  },
 }
 
 function generateDynamicRoutes(articles) {
-  return ['/404'].concat(articles.map(article => `/blog/${article.slug}`))
+  return ['/404'].concat(articles.map((article) => `/blog/${article.slug}`))
 }
