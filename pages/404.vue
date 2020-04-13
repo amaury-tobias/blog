@@ -10,8 +10,8 @@
 export default {
   head() {
     return {
-      title: '404'
+      title: '404',
     }
-  }
+  },
 }
 </script>

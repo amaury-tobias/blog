@@ -1,11 +1,11 @@
 const fs = require('fs')
 const parseMarkdown = require('front-matter-markdown')
 
-const getFiles = dir => {
+const getFiles = (dir) => {
   const files = fs.readdirSync(dir)
   const fileList = []
 
-  files.forEach(file => {
+  files.forEach((file) => {
     if (file.split('.').pop() !== 'md') return
 
     const markdownFile = fs.readFileSync(`${dir}${file}`, 'utf-8')
@@ -15,10 +15,7 @@ const getFiles = dir => {
     const title = fileContents.title
     const description = fileContents.description
     const author = fileContents.author
-    const slug = file
-      .split('.')
-      .slice(0, -1)
-      .join('.')
+    const slug = file.split('.').slice(0, -1).join('.')
 
     const obj = { date, slug, image, title, description, author }
     fileList.push(obj)
@@ -36,7 +33,7 @@ const writeBlogs = async () => {
   const reversedArray = await sortedArray.reverse()
   const jsonContent = await JSON.stringify(reversedArray)
 
-  fs.writeFile('content/articles.json', jsonContent, err => {
+  fs.writeFile('content/articles.json', jsonContent, (err) => {
     if (err) throw new Error(err)
   })
 }

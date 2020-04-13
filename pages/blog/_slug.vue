@@ -20,21 +20,21 @@ export default {
   name: 'Slug',
   asyncData({ params }) {
     return {
-      slug: params.slug
+      slug: params.slug,
     }
   },
   data: () => ({
     title: '',
     date: null,
-    episodeContent: null
+    episodeContent: null,
   }),
   created() {
-    import(`~/content/articles/${this.slug}.md`).then(c => {
+    import(`~/content/articles/${this.slug}.md`).then((c) => {
       this.title = c.attributes.title
       const options = {
         year: 'numeric',
         month: 'short',
-        day: 'numeric'
+        day: 'numeric',
       }
       const publishedDate = new Date(c.attributes.date)
       this.date = publishedDate.toLocaleString('es', options)
@@ -42,8 +42,8 @@ export default {
       const componente = new ComponentClass({
         propsData: {
           renderFunc: c.vue.render,
-          staticRenderFuncs: c.vue.staticRenderFns
-        }
+          staticRenderFuncs: c.vue.staticRenderFns,
+        },
       })
       componente.$mount()
       this.$refs.container.appendChild(componente.$el)
@@ -56,11 +56,11 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'My custom description'
-        }
-      ]
+          content: 'My custom description',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

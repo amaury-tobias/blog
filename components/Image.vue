@@ -9,20 +9,20 @@ export default {
   props: {
     src: {
       type: String,
-      default: ''
+      default: '',
     },
     size: {
       type: Number,
-      default: null
+      default: null,
     },
     start: {
       type: Boolean,
-      default: false
+      default: false,
     },
     end: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     $size() {
@@ -32,8 +32,8 @@ export default {
       if (this.start) return 'justify-content: flex-start;'
       else if (this.end) return 'justify-content: flex-end;'
       else return 'justify-content: center;'
-    }
-  }
+    },
+  },
 }
 </script>
 

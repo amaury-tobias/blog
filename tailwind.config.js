@@ -4,5 +4,5 @@ module.exports = {
   important: false,
   theme: {},
   variants: {},
-  plugins: []
+  plugins: [],
 }

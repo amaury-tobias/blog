@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  props: { error: { type: Object, required: true } }
+  props: { error: { type: Object, required: true } },
 }
 </script>

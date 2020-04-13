@@ -24,12 +24,12 @@ export default {
   watch: {
     darkMode() {
       this.$store.dispatch('theme/setDarkMode', this.darkMode)
-    }
+    },
   },
   beforeMount() {
     this.darkMode = JSON.parse(localStorage.getItem('darkMode'))
     this.$store.dispatch('theme/setDarkMode', this.darkMode)
-  }
+  },
 }
 </script>
 

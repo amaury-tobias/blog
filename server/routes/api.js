@@ -7,8 +7,8 @@ router.get('/noticias', (req, res, next) => {
       slug: 1,
       title: 'Nueva Pagina',
       description: 'Estrenamos nueva pagina, que esperas para visitarnos',
-      image: 'https://bulma.io/images/placeholders/480x320.png'
-    }
+      image: 'https://bulma.io/images/placeholders/480x320.png',
+    },
   ])
 })
 

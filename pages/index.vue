@@ -112,8 +112,8 @@ export default {
   name: 'Index',
   methods: {
     // eslint-disable-next-line no-console
-    ghStatus: (done, e) => console.log(done, e)
-  }
+    ghStatus: (done, e) => console.log(done, e),
+  },
 }
 </script>
 

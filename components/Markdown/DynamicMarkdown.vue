@@ -23,7 +23,7 @@ export default {
   // },
   render(createElement) {
     return this.templateRender ? this.templateRender() : createElement('div', 'error')
-  }
+  },
 }
 </script>
 

@@ -10,14 +10,14 @@ export default {
   name: 'BlogEntryItem',
   props: { post: { type: Object, required: true } },
   methods: {
-    parseDate: date => {
+    parseDate: (date) => {
       return new Date(date).toLocaleString('es', {
         year: 'numeric',
         month: 'short',
-        day: 'numeric'
+        day: 'numeric',
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

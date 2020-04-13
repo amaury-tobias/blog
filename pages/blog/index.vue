@@ -21,9 +21,9 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Posts'
-      }
-    ]
-  })
+        content: 'Posts',
+      },
+    ],
+  }),
 }
 </script>
