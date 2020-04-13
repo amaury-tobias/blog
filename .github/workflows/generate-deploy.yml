@@ -8,7 +8,9 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@stage
+      - uses: actions/checkout@v2
+        with:
+          ref: stage
 
       - name: Set Node.js 12.x
         uses: actions/setup-node@v1.1.0
