@@ -40,21 +40,29 @@
           .text-left.md_text-right.mb-4
             p.text-3xl.uppercase.title Experiencia
           .my-2
+              span.text-base.uppercase 11/2018 - actual
+              br
+              span Grupo GarSa
+              br
+              a(href='http://www.grupogarsa.com').link-active http://www.grupogarsa.com
+          .my-2
               span.text-base.uppercase 01/2018 - 09/2019
               br
               span Centro de Servicios en Informática
               br
-              a http://www.csi.uanl.mx/
+              a(href='http://www.csi.uanl.mx/').link-active http://www.csi.uanl.mx/
 
   #proyectos.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
       .text-left.md_text-right.mb-4
         p.text-3xl.uppercase.title Proyectos personales
       .my-2.text-center
-        a(href='https://amaury-tobias.github.io/v-avatar/').text-2xl v-avatar
+        a(href='https://amaury-tobias.github.io/v-avatar/').text-2xl.flex.flex-col.items-center
+          span v-avatar
           img(src='~assets/images/v-avatar-1.PNG')
       .my-2.text-center
-        a(href='https://amaury-tobias.github.io/v-github-activity/').text-2xl v-github-activity
+        a(href='https://amaury-tobias.github.io/v-github-activity/').text-2xl.flex.flex-col.items-center
+          span v-github-activity
           img(src='~assets/images/v-github-activity.png')
 
   #skills.mx-auto.px-12.md_px-32.lg_px-40
@@ -75,7 +83,7 @@
         //progress.progress.is-dark(value='20' max='100') 15%
       .my-2
         span.text-2xl JS:&nbsp;
-        span.text-sm NodeJS · Express · Koa
+        span.text-sm Typescript · NodeJS · Express · Koa
         //progress.progress.is-dark(value='20' max='100') 15%
       .my-2
         span.text-2xl VUE:&nbsp;
@@ -91,13 +99,13 @@
         //progress.progress.is-dark(value='20' max='100') 15%
       .my-2
         span.text-2xl TOOLS:&nbsp;
-        span.text-sm Nginx · Git · BASH
+        span.text-sm Nginx · Git · BASH · VIM
       .my-2
         span.text-2xl CI/CD:&nbsp;
         span.text-sm Travis CI · Github Actions
 
   #github.mx-auto.px-0.md_px-32.lg_px-40.my-4
-    github-feed(login='amaury-tobias' @status='ghStatus')
+    github-feed(login='amaury-tobias')
 
   footer.footer
     div
@@ -110,10 +118,6 @@
 <script>
 export default {
   name: 'Index',
-  methods: {
-    // eslint-disable-next-line no-console
-    ghStatus: (done, e) => console.log(done, e),
-  },
 }
 </script>
 

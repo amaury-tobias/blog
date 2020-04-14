@@ -16,12 +16,12 @@ export default {
   components: { BlogEntryItem },
   asyncData: () => ({ posts }),
   head: () => ({
-    title: 'Posts',
+    title: 'POSTS | AMAURY.',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: 'Posts',
+        content: 'Publicaciónes en mi Blog personal, compartiendo un poco de mí.',
       },
     ],
   }),
