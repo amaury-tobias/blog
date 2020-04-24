@@ -40,7 +40,7 @@
           .text-left.mb-4
             p.text-3xl.uppercase.title Experiencia
           .my-2
-              span.text-base.uppercase 11/2018 - actual
+              span.text-base.uppercase 11/2019 - actual
               br
               span Desarrollador Full Stack @ Grupo GarSa
               br
