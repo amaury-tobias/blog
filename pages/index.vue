@@ -7,7 +7,7 @@
 
   #about.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
-      .text-left.md_text-right.mb-4
+      .text-left.mb-4
         p.text-3xl.uppercase.title Acerca de mi
       .text-left
         .flex.flex-col
@@ -18,7 +18,7 @@
     .min-h-screen
       .flex.items-stretch.justify-center.items-start.flex-col
         .flex.flex-col.items-stretch.justify-center.items-center
-          .text-left.md_text-right.mb-4
+          .text-left.mb-4
             p.text-3xl.uppercase.title Educación
           .my-2
             span.text-base.uppercase 2016 - Presente
@@ -37,24 +37,24 @@
             br
             span Colegio de Bachilleres. Cedral, SLP
         .flex.flex-col.items-stretch.justify-center.items-center.mt-4
-          .text-left.md_text-right.mb-4
+          .text-left.mb-4
             p.text-3xl.uppercase.title Experiencia
           .my-2
               span.text-base.uppercase 11/2018 - actual
               br
-              span Grupo GarSa
+              span Desarrollador Full Stack @ Grupo GarSa
               br
               a(href='http://www.grupogarsa.com').link-active http://www.grupogarsa.com
           .my-2
               span.text-base.uppercase 01/2018 - 09/2019
               br
-              span Centro de Servicios en Informática
+              span Desarrollador Full Stack @ Centro de Servicios en Informática
               br
               a(href='http://www.csi.uanl.mx/').link-active http://www.csi.uanl.mx/
 
   #proyectos.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
-      .text-left.md_text-right.mb-4
+      .text-left.mb-4
         p.text-3xl.uppercase.title Proyectos personales
       .my-2.text-center
         a(href='https://amaury-tobias.github.io/v-avatar/').text-2xl.flex.flex-col.items-center
@@ -67,15 +67,15 @@
 
   #skills.mx-auto.px-12.md_px-32.lg_px-40
     .min-h-screen.flex.items-stretch.justify-center.items-start.flex-col
-      .text-left.md_text-right.mb-4
+      .text-left.mb-4
         p.text-3xl.uppercase.title Habilidades
       .my-2
         span.text-2xl CSS:&nbsp;
         span.text-sm CSS3 · SASS · POSTCSS
         //progress.progress(value='20' max='100') 15%
       .my-2
-        span.text-2xl HTML:&nbsp;
-        span.text-sm HTML · Pug · Thymeleaf
+        span.text-2xl DOCKER:&nbsp;
+        span.text-sm Docker · Docker-compose
         //progress.progress.is-dark(value='20' max='100') 15%
       .my-2
         span.text-2xl JVM:&nbsp;
@@ -91,11 +91,11 @@
         //progress.progress.is-dark(value='20' max='100') 15%
       .my-2
         span.text-2xl SWIFT:&nbsp;
-        span.text-sm Cocoapods · Carthage
+        span.text-sm iOS · Cocoapods · Carthage
         //progress.progress.is-dark(value='20' max='100') 15%
       .my-2
         span.text-2xl DB:&nbsp;
-        span.text-sm MySQL · MongoDB
+        span.text-sm MySQL · MongoDB · MSSQL
         //progress.progress.is-dark(value='20' max='100') 15%
       .my-2
         span.text-2xl TOOLS:&nbsp;
