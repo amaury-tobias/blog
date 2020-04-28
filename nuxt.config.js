@@ -46,6 +46,7 @@ module.exports = {
     '~/plugins/lazyload.js',
     '~/plugins/lazyImage.js',
     '~/plugins/vueGithubActivity.js',
+    '~/plugins/highlightjs-directive.js',
   ],
   modules: ['@nuxtjs/axios', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
   buildModules: ['@nuxtjs/tailwindcss'],
@@ -65,9 +66,9 @@ module.exports = {
         loader: 'frontmatter-markdown-loader',
         include: path.resolve(__dirname, 'content/articles'),
         options: {
-          mode: [Mode.VUE_RENDER_FUNCTIONS],
+          mode: [Mode.VUE_COMPONENT],
           vue: {
-            root: 'dynamicContent',
+            root: 'markdown-body',
           },
         },
       })

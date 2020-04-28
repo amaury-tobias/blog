@@ -1,35 +1,58 @@
+<template lang="pug">
+.animated.fadeIn.min-h-full.w-full.font-light.py-24
+  .container.mx-auto.px-12.md_px-32.lg_px-40
+    h3.text-sm.md_text-base {{ date }}
+    h1.break-words.text-2xl.md_text-4xl {{ title }}
+    section
+      .container.text-left.content
+        div(ref='container')
+          component(:is='markdownContent' v-highlight)
+        .relative.pt-8
+          n-link.absolute.right-0.bottom-0(to='/blog') ATRÁS
+</template>
+
 <script>
-import hljs from 'highlight.js/lib/highlight'
-import javascript from 'highlight.js/lib/languages/javascript'
-import css from 'highlight.js/lib/languages/css'
-import xml from 'highlight.js/lib/languages/xml'
-import 'highlight.js/styles/nord.css'
-hljs.registerLanguage('javascript', javascript)
-hljs.registerLanguage('css', css)
-hljs.registerLanguage('xml', xml)
+import ErrorComponent from '~/layouts/error.vue'
 
 export default {
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['renderFunc', 'staticRenderFuncs'],
-  created() {
-    this.templateRender = this.renderFunc
-    this.$options.staticRenderFns = this.staticRenderFuncs
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
   },
-  // mounted() {
-  // const targets = document.querySelectorAll('code')
-  // targets.forEach(target => {
-  // hljs.highlightBlock(target)
-  // })
-  // },
-  render(createElement) {
-    return this.templateRender ? this.templateRender() : createElement('div', 'error')
+  data: () => ({
+    title: '',
+    date: '',
+    error: null,
+  }),
+  methods: {
+    markdownContent() {
+      return import(`~/content/articles/${this.name}.md`)
+        .then((fmd) => {
+          this.title = fmd.attributes.title
+          const publishedDate = new Date(fmd.attributes.date)
+          this.date = publishedDate.toLocaleString('es', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })
+          return fmd.vue.component
+        })
+        .catch((e) => {
+          // eslint-disable-next-line no-console
+          console.error(e)
+          this.error = e
+          return ErrorComponent
+        })
+    },
   },
 }
 </script>
 
 <style lang="postcss">
 @media only screen and (min-width: 768px) {
-  .dynamicContent {
+  .markdown-body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
